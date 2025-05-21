@@ -1,5 +1,12 @@
 // 4-concat.js
-const firstWord = process.argv[2] || "undefined"; // First word (or "undefined")
-const secondWord = process.argv[3] || "undefined"; // Second word (or "undefined")
+// 4-concat.js
+const arg1 = process.argv[2] || undefined;
+const arg2 = process.argv[3] || undefined;
 
-console.log(${firstWord} is ${secondWord});
+if (arg1 !== undefined && arg2 !== undefined) {
+  console.log(`${arg1} is ${arg2}`);
+} else if (arg1 !== undefined) {
+  console.log(arg1);
+} else {
+  console.log("undefined is undefined");
+}
